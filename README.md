@@ -7,4 +7,6 @@ The format of the message would be: a number (1 to 6) that corresponds to a reas
 
 The app uses the Shared preferences to store the user's information.
 
-The use of the app is intended to only automate the procedure of composing and sending the sms message.
+The use of the app is only intended to automate the procedure of composing and sending the sms message.
+
+The receiver's number is not declared. The number can be set in the String resource file.

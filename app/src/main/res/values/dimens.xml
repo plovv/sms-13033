@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edit_btn_width">40dp</dimen>
+    <dimen name="edit_btn_height">40dp</dimen>
+    <dimen name="edit_btn_padding">2dp</dimen>
+    <dimen name="general_margin">10dp</dimen>
+    <dimen name="label_height">20dp</dimen>
+    <dimen name="choice_height">105dp</dimen>
+    <dimen name="choice_margin_bot">2dp</dimen>
+</resources>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SMS 13033</string>
+
+    <string name="receivers_number">NULL</string>
+
+    <string name="user_name_stored_key">user_name</string>
+    <string name="user_address_stored_key">user_address</string>
+
+    <string name="user_name">Full name:</string>
+    <string name="user_address">Address:</string>
+    <string name="choice_1">Select option 1.</string>
+    <string name="choice_2">Select option 2.</string>
+    <string name="choice_3">Select option 3.</string>
+    <string name="choice_4">Select option 4.</string>
+    <string name="choice_5">Select option 5.</string>
+    <string name="choice_6">Select option 6.</string>
+    <string name="send_button">Send</string>
+    <string name="message_no_name">Enter your full name.</string>
+    <string name="message_no_address">Enter your address.</string>
+    <string name="message_no_info">Enter your personal information.</string>
+    <string name="message_fail">Failed to send sms</string>
+    <string name="sms_sent_msg">SMS sent!</string>
+    <string name="sms_generic_fail">Generic failure</string>
+    <string name="sms_no_srv">No service</string>
+    <string name="sms_null_pdu">Null PDU</string>
+    <string name="sms_radio_off">Radio off</string>
+</resources>

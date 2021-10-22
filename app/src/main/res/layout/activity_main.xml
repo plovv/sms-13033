@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        
+        <variable
+            name="dataModel"
+            type="com.plovv.sms13033.DataModel" />
+        
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/lbl_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/label_height"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/general_margin"
+            android:text="@string/user_name"
+            android:textColor="@color/text_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/user_name_input"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/general_margin"
+            android:layout_marginEnd="@dimen/general_margin"
+            android:background="@drawable/bg_input"
+            android:enabled="false"
+            android:gravity="start|center_vertical"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:padding="@dimen/edit_btn_padding"
+            android:textColor="@color/text_input"
+            app:layout_constraintEnd_toStartOf="@+id/user_name_edit_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_user_name"
+            android:text="@{dataModel.fullName}" />
+
+        <ImageButton
+            android:id="@+id/user_name_edit_btn"
+            android:layout_width="@dimen/edit_btn_width"
+            android:layout_height="@dimen/edit_btn_height"
+            android:layout_marginEnd="@dimen/general_margin"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/user_name_input"
+            app:layout_constraintTop_toTopOf="@+id/user_name_input" />
+
+        <TextView
+            android:id="@+id/user_address_label"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/label_height"
+            android:layout_margin="@dimen/general_margin"
+            android:text="@string/user_address"
+            android:textColor="@color/text_label"
+            app:layout_constraintTop_toBottomOf="@id/user_name_input" />
+
+        <EditText
+            android:id="@+id/user_address_input"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="@dimen/general_margin"
+            android:layout_marginEnd="@dimen/general_margin"
+            android:background="@drawable/bg_input"
+            android:enabled="false"
+            android:gravity="start|top"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:padding="@dimen/edit_btn_padding"
+            android:textColor="@color/text_input"
+            app:layout_constraintEnd_toStartOf="@+id/user_address_edit_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_address_label"
+            android:text="@{dataModel.address}" />
+
+        <ImageButton
+            android:id="@+id/user_address_edit_btn"
+            android:layout_width="@dimen/edit_btn_width"
+            android:layout_height="@dimen/edit_btn_height"
+            android:layout_marginEnd="@dimen/general_margin"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="@+id/user_address_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/user_address_input"
+            app:layout_constraintTop_toTopOf="@+id/user_address_input" />
+
+        <ScrollView
+            android:id="@+id/choices_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_address_input"
+            app:layout_constraintBottom_toTopOf="@id/send_sms_btn"
+            android:layout_margin="@dimen/general_margin">
+
+            <RadioGroup
+                android:id="@+id/choices_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/choice_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/choice_height"
+                    android:layout_marginBottom="@dimen/choice_margin_bot"
+                    android:checked="true"
+                    android:text="@string/choice_1"
+                    android:textColor="@color/text_label" />
+
+                <RadioButton
+                    android:id="@+id/choice_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/choice_height"
+                    android:layout_marginBottom="@dimen/choice_margin_bot"
+                    android:text="@string/choice_2"
+                    android:textColor="@color/text_label" />
+
+                <RadioButton
+                    android:id="@+id/choice_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/choice_height"
+                    android:layout_marginBottom="@dimen/choice_margin_bot"
+                    android:text="@string/choice_3"
+                    android:textColor="@color/text_label" />
+
+                <RadioButton
+                    android:id="@+id/choice_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/choice_height"
+                    android:layout_marginBottom="@dimen/choice_margin_bot"
+                    android:text="@string/choice_4"
+                    android:textColor="@color/text_label" />
+
+                <RadioButton
+                    android:id="@+id/choice_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/choice_height"
+                    android:layout_marginBottom="@dimen/choice_margin_bot"
+                    android:text="@string/choice_5"
+                    android:textColor="@color/text_label" />
+
+                <RadioButton
+                    android:id="@+id/choice_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/choice_height"
+                    android:layout_marginBottom="@dimen/choice_margin_bot"
+                    android:text="@string/choice_6"
+                    android:textColor="@color/text_label" />
+
+            </RadioGroup>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/send_sms_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_button"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/teal_700"
+            app:layout_constraintTop_toBottomOf="@id/choices_container"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

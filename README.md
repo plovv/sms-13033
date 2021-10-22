@@ -9,4 +9,4 @@ The app uses the Shared preferences to store the user's information.
 
 The use of the app is only intended to automate the procedure of composing and sending the sms message.
 
-The receiver's number is not declared. The number can be set in the String resource file.
+The receiver's number is not declared. The number can be set in the strings resource file.

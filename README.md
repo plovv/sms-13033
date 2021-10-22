@@ -7,4 +7,4 @@ The format of the message would be: a number (1 to 6) that corresponds to a reas
 
 The app uses the Shared preferences to store the user's information.
 
-The use of the app is to only automate the procedure of composing and sending the sms message.
+The use of the app is intended to only automate the procedure of composing and sending the sms message.
